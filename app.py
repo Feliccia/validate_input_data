@@ -17,7 +17,7 @@ def handle_form():
     # Validate ID number (assuming 台灣ID)
     if len(id_number)!=10:
         return "身分證號碼應該為10碼", 400
-    if not id_number[0].idalpha():
+    if not id_number[0].isalpha():
         return "第一個字元應為英文字母", 400
 
     # Validate name (assuming it's alphabetic)
